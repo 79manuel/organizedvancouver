@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, auto); }
+
+header {
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 0.75fr 3.25fr;
+  grid-template-rows: 100px;
+  background-color: burlywood;
+  border: 1px solid bisque;
+  position: fixed;
+  width: 100%; }
+  header div {
+    border: 1px solid bisque;
+    background-color: peru; }
+  header .navbar {
+    display: flex;
+    justify-content: space-around; }
+    header .navbar ul {
+      display: flex;
+      border: 1px solid black; }
+      header .navbar ul li {
+        align-self: center;
+        list-style-type: none;
+        padding: 15px; }
+
+.paralax-image {
+  grid-row: 2;
+  background-color: chocolate;
+  height: calc(100vh - 100px);
+  width: 100%;
+  margin-top: 100px;
+  border: 5px solid black; }
+
+main {
+  grid-row: 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  justify-items: center;
+  align-items: center;
+  padding: 100px 0;
+  border: 5px solid black; }
+  main div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px auto;
+    justify-items: center;
+    width: 95%; }
+    main div .service-image {
+      grid-row: 1;
+      background-color: darkslategray; }
+    main div .description-box {
+      background-color: chocolate;
+      grid-row: 2;
+      width: 80%; }
+
+.about-me {
+  grid-row: 4;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 20px;
+  height: 300px;
+  justify-items: center; }
+  .about-me div {
+    width: 95%;
+    border: 1px solid black;
+    background-color: rebeccapurple;
+    align-items: center; }
+
+/*# sourceMappingURL=style.css.map */
