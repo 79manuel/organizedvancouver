@@ -14,7 +14,7 @@ header
   display: grid
   grid-template-columns: 0.75fr 3.25fr
   grid-template-rows: 100px
-  background-color: burlywood //REMOVE
+  background-color: #ffffff
   border: 1px solid bisque //REMOVE
   position: fixed
   width: 100%
@@ -22,7 +22,6 @@ header
 
   div
     border: 1px solid bisque
-    background-color: peru //REMOVE
 
   .navbar
     display: flex
@@ -76,17 +75,37 @@ main
 
     .service-image
       grid-row: 1
-      background-color: darkslategray //REMOVE
-      img
+      .bg
+        background: url("../images/alberto-castillo-home-organizing.png") no-repeat center center
+        background-size: cover
         width: 100%
         height: 150px
-        border: 1px solid lightgrey
+        border: 1px solid rgb(51, 53, 56)
         border-bottom: none
+      p
+        position: relative
+        top: -130px
+        visibility: hidden
+        -webkit-transition: all 0.2s linear
+        transition: all 0.2s linear
+
+    .service-image:hover
+      cursor: pointer
+      p
+        visibility: visible
+        -webkit-transition: all 0.2s linear
+        transition: all 0.2s linear
+        font-size: 25px
+      .bg
+        background-color: #000
+        opacity: 0.6
 
     .description-box
       grid-row: 2
-      border: 1px solid lightgrey
+      border: 1px solid rgb(51, 53, 56)
+      border-top: none
       width: 80%
+      align-items: center
 
 .about-me
   grid-row: 4
@@ -94,13 +113,10 @@ main
   grid-template-columns: repeat(auto-fit, minmax(375px, 1fr))
   grid-auto-rows: minmax(100px, auto)
   grid-gap: 20px
-  //height: 300px //REMOVE
   justify-items: center
 
   div
     width: 95% //REMOVE
-    border: 1px solid black //REMOVE
-    background-color: rebeccapurple
     align-items: center
     justify-self: center
     text-align: center
@@ -108,7 +124,6 @@ main
     img
       width: 85%
       margin: 0 auto
-      border: 4px solid black //REMOVE
 
 footer
   grid-row: 5
