@@ -18,6 +18,7 @@ header
   border: 1px solid bisque //REMOVE
   position: fixed
   width: 100%
+  z-index: 10
 
   div
     border: 1px solid bisque
@@ -38,10 +39,23 @@ header
 
 .paralax-image
   grid-row: 2
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  grid-template-rows: minmax(40px, auto)
+  width: 100%
   height: 100vh
-  div
-    background: url("../images/paralax-image.png") no-repeat fixed
-    background-size: cover
+  background: url("../images/paralax-image.png") no-repeat center center fixed
+  background-size: cover
+
+  p
+    grid-column: 1 / 2
+    grid-row: 2
+    text-align: justify
+    height: 40%
+    font-size: 28px
+    transform: translate(70px, -70px)
+    z-index: 1
+
 main
   grid-row: 3
   display: grid
@@ -50,7 +64,6 @@ main
   justify-items: center
   align-items: center
   padding: 100px 0
-  border: 5px solid black //REMOVE
 
   div
     display: grid
@@ -68,10 +81,11 @@ main
         width: 100%
         height: 150px
         border: 1px solid lightgrey
+        border-bottom: none
 
     .description-box
-      background-color: chocolate //REMOVE
       grid-row: 2
+      border: 1px solid lightgrey
       width: 80%
 
 .about-me
