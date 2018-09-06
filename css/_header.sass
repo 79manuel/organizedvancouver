@@ -1,0 +1,43 @@
+$font-stack: 'Montserrat', sans-serif
+$primary-color1: #29A79E
+$primary-color2: #90C73E
+
+header
+  grid-row: 1
+  display: grid
+  grid-template-columns: 0.75fr 3.25fr
+  grid-template-rows: 100px
+  background-color: #ffffff
+  position: fixed
+  border-bottom: 1px solid $primary-color1
+  width: 100%
+  z-index: 10
+
+  .logo
+    img
+      width: 250px
+
+  .navbar
+    display: flex
+    justify-content: space-around
+    ul
+      display: flex
+      li
+        align-self: center
+        list-style-type: none
+        padding: 15px 20px
+        margin: 0 5px
+        border-top: 1px solid $primary-color1
+        border-bottom: 1px solid $primary-color1
+        a
+          text-decoration: none
+          color: black
+      .active, li:hover
+        border-top: 1px solid lightgray
+        border-bottom: 1px solid lightgray
+        color: lightgray
+      li:nth-child(7)
+        margin-left: 25px
+        text-align: center
+        font-weight: bold
+        border: none
