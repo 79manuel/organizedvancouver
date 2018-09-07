@@ -50,7 +50,7 @@ footer {
       footer ul li img {
         vertical-align: bottom;
         width: 130%; }
-      footer ul li p > a, footer ul li .paralax-image h1 > a, .paralax-image footer ul li h1 > a {
+      footer ul li p > a, footer ul li .paralax-image h1 > a, .paralax-image footer ul li h1 > a, footer ul li .paralax-image-office h1 > a, .paralax-image-office footer ul li h1 > a, footer ul li .paralax-image-documents h1 > a, .paralax-image-documents footer ul li h1 > a, footer ul li .paralax-image-homeorg h1 > a, .paralax-image-homeorg footer ul li h1 > a, footer ul li .paralax-image-wardrobe h1 > a, .paralax-image-wardrobe footer ul li h1 > a {
         text-decoration: none;
         color: black; }
 
@@ -66,7 +66,7 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, auto); }
 
-.paralax-image {
+.paralax-image, .paralax-image-office, .paralax-image-documents, .paralax-image-homeorg, .paralax-image-wardrobe {
   grid-row: 2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -75,7 +75,7 @@ body {
   height: 100vh;
   background: url("../images/paralax-image.png") no-repeat center center fixed;
   background-size: cover; }
-  .paralax-image p, .paralax-image h1 {
+  .paralax-image p, .paralax-image-office p, .paralax-image-documents p, .paralax-image-homeorg p, .paralax-image-wardrobe p, .paralax-image h1, .paralax-image-office h1, .paralax-image-documents h1, .paralax-image-homeorg h1, .paralax-image-wardrobe h1 {
     grid-column: 1/2;
     grid-row: 2;
     text-align: center;
@@ -83,7 +83,7 @@ body {
     font-size: 28px;
     transform: translate(70px, -70px);
     z-index: 1; }
-  .paralax-image h1 {
+  .paralax-image h1, .paralax-image-office h1, .paralax-image-documents h1, .paralax-image-homeorg h1, .paralax-image-wardrobe h1 {
     font-size: 38px;
     transform: translate(70px, -120px);
     z-index: 1; }
@@ -120,7 +120,7 @@ main {
         background: url("../images/rawpixel-626045-unsplash.png") no-repeat center center; }
       main div .service-image .wardrobe {
         background: url("../images/fancycrave-254187-unsplash.png") no-repeat center center; }
-      main div .service-image p, main div .service-image .paralax-image h1, .paralax-image main div .service-image h1 {
+      main div .service-image p, main div .service-image .paralax-image h1, .paralax-image main div .service-image h1, main div .service-image .paralax-image-office h1, .paralax-image-office main div .service-image h1, main div .service-image .paralax-image-documents h1, .paralax-image-documents main div .service-image h1, main div .service-image .paralax-image-homeorg h1, .paralax-image-homeorg main div .service-image h1, main div .service-image .paralax-image-wardrobe h1, .paralax-image-wardrobe main div .service-image h1 {
         color: #ffffff;
         position: relative;
         top: -130px;
@@ -129,7 +129,7 @@ main {
         transition: all 0.2s linear; }
     main div .service-image:hover {
       cursor: pointer; }
-      main div .service-image:hover p, main div .service-image:hover .paralax-image h1, .paralax-image main div .service-image:hover h1 {
+      main div .service-image:hover p, main div .service-image:hover .paralax-image h1, .paralax-image main div .service-image:hover h1, main div .service-image:hover .paralax-image-office h1, .paralax-image-office main div .service-image:hover h1, main div .service-image:hover .paralax-image-documents h1, .paralax-image-documents main div .service-image:hover h1, main div .service-image:hover .paralax-image-homeorg h1, .paralax-image-homeorg main div .service-image:hover h1, main div .service-image:hover .paralax-image-wardrobe h1, .paralax-image-wardrobe main div .service-image:hover h1 {
         visibility: visible;
         -webkit-transition: all 0.2s linear;
         transition: all 0.2s linear;
@@ -167,10 +167,56 @@ main {
     align-items: center;
     justify-self: center;
     text-align: left; }
-    .about-me div:nth-child(2) p, .about-me div:nth-child(2) .paralax-image h1, .paralax-image .about-me div:nth-child(2) h1 {
+    .about-me div:nth-child(2) p, .about-me div:nth-child(2) .paralax-image h1, .paralax-image .about-me div:nth-child(2) h1, .about-me div:nth-child(2) .paralax-image-office h1, .paralax-image-office .about-me div:nth-child(2) h1, .about-me div:nth-child(2) .paralax-image-documents h1, .paralax-image-documents .about-me div:nth-child(2) h1, .about-me div:nth-child(2) .paralax-image-homeorg h1, .paralax-image-homeorg .about-me div:nth-child(2) h1, .about-me div:nth-child(2) .paralax-image-wardrobe h1, .paralax-image-wardrobe .about-me div:nth-child(2) h1 {
       padding: 10px 20px;
       margin: 20px; }
     .about-me div:nth-child(2) ul li ul {
       list-style-position: inside; }
+
+.paralax-image-office, .paralax-image-documents, .paralax-image-homeorg, .paralax-image-wardrobe {
+  grid-row: 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: minmax(100px, auto);
+  width: 100%;
+  height: 30vh;
+  background: url("../images/emma-matthews-schedule-unsplash-banner.png") no-repeat center center fixed;
+  background-size: cover; }
+
+.office-tag, .documents-tag, .homeorg-tag, .wardrobe-tag {
+  grid-column: 1/-1;
+  grid-row: 2;
+  text-align: center;
+  font-size: 38px;
+  font-weight: bold;
+  margin-top: 100px;
+  padding: 20px; }
+
+.office-main, .documents-main, .homeorg-main, .wardrobe-main {
+  grid-row: 4; }
+  .office-main article, .documents-main article, .homeorg-main article, .wardrobe-main article {
+    justify-items: center;
+    width: 80%;
+    margin: auto;
+    font-size: 18px; }
+    .office-main article ul, .documents-main article ul, .homeorg-main article ul, .wardrobe-main article ul {
+      list-style-position: inside;
+      padding-top: 5px; }
+
+.paralax-image-documents {
+  background: url("../images/alberto-castillo-qunsplash-banner.png") no-repeat center center fixed;
+  background-size: cover; }
+
+.paralax-image-homeorg {
+  background: url("../images/rawpixel-document-unsplash-banner.png") no-repeat center center fixed;
+  background-size: cover; }
+
+.homeorg-main p, .wardrobe-main p, .homeorg-main .paralax-image h1, .paralax-image .homeorg-main h1, .wardrobe-main .paralax-image h1, .paralax-image .wardrobe-main h1, .homeorg-main .paralax-image-office h1, .paralax-image-office .homeorg-main h1, .wardrobe-main .paralax-image-office h1, .paralax-image-office .wardrobe-main h1, .homeorg-main .paralax-image-documents h1, .paralax-image-documents .homeorg-main h1, .wardrobe-main .paralax-image-documents h1, .paralax-image-documents .wardrobe-main h1, .homeorg-main .paralax-image-homeorg h1, .paralax-image-homeorg .homeorg-main h1, .wardrobe-main .paralax-image-homeorg h1, .paralax-image-homeorg .wardrobe-main h1, .homeorg-main .paralax-image-wardrobe h1, .paralax-image-wardrobe .homeorg-main h1, .wardrobe-main .paralax-image-wardrobe h1, .paralax-image-wardrobe .wardrobe-main h1 {
+  font-size: 18px;
+  padding-top: 7px; }
+
+.paralax-image-wardrobe {
+  background: url("../images/rawpixel-document-unsplash-banner.png") no-repeat center center fixed;
+  background-size: cover; }
 
 /*# sourceMappingURL=style.css.map */
