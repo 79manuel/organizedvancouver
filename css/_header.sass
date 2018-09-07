@@ -12,32 +12,75 @@ header
   border-bottom: 1px solid $primary-color1
   width: 100%
   z-index: 10
-
   .logo
     img
       width: 250px
 
   .navbar
     display: flex
-    justify-content: space-around
+    justify-content: center
     ul
       display: flex
+      margin-left: 60px
       li
         align-self: center
         list-style-type: none
-        padding: 15px 20px
+        padding: 15px 40px
         margin: 0 5px
         border-top: 1px solid $primary-color1
         border-bottom: 1px solid $primary-color1
         a
           text-decoration: none
           color: black
-      .active, li:hover
+        ul li
+          border: none !important
+      li:hover
         border-top: 1px solid lightgray
         border-bottom: 1px solid lightgray
-        color: lightgray
-      li:nth-child(7)
-        margin-left: 25px
+
+      li:nth-child(4)
+        margin-left: 65px
         text-align: center
-        font-weight: bold
         border: none
+        a
+          font-weight: bolder
+
+.dropdown
+  position: relative
+  display: inline-block
+  ul
+    border: none
+
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content
+  display: none
+  position: absolute
+  top: 50px
+  right: 0
+  background-color: #ffffff
+  width: 160%
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)
+  z-index: 1
+
+/* Links inside the dropdown */
+.dropdown-content
+  a
+    color: black
+    padding: 15px
+    text-decoration: none
+    display: block
+    width: auto
+  a:nth-child(2)
+    border-top: 1px solid $primary-color1
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover
+  cursor: pointer
+  background-color: #f2f2f2
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content
+  display: block
+  transition: 1s
+
+

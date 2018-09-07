@@ -12,28 +12,68 @@ header {
     width: 250px; }
   header .navbar {
     display: flex;
-    justify-content: space-around; }
+    justify-content: center; }
     header .navbar ul {
-      display: flex; }
+      display: flex;
+      margin-left: 60px; }
       header .navbar ul li {
         align-self: center;
         list-style-type: none;
-        padding: 15px 20px;
+        padding: 15px 40px;
         margin: 0 5px;
         border-top: 1px solid #29A79E;
         border-bottom: 1px solid #29A79E; }
         header .navbar ul li a {
           text-decoration: none;
           color: black; }
-      header .navbar ul .active, header .navbar ul li:hover {
+        header .navbar ul li ul li {
+          border: none !important; }
+      header .navbar ul li:hover {
         border-top: 1px solid lightgray;
-        border-bottom: 1px solid lightgray;
-        color: lightgray; }
-      header .navbar ul li:nth-child(7) {
-        margin-left: 25px;
+        border-bottom: 1px solid lightgray; }
+      header .navbar ul li:nth-child(4) {
+        margin-left: 65px;
         text-align: center;
-        font-weight: bold;
         border: none; }
+        header .navbar ul li:nth-child(4) a {
+          font-weight: bolder; }
+
+.dropdown {
+  position: relative;
+  display: inline-block; }
+  .dropdown ul {
+    border: none; }
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #ffffff;
+  width: 160%;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1; }
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 15px;
+  text-decoration: none;
+  display: block;
+  width: auto; }
+.dropdown-content a:nth-child(2) {
+  border-top: 1px solid #29A79E; }
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  cursor: pointer;
+  background-color: #f2f2f2; }
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  transition: 1s; }
 
 footer {
   grid-row: 5;
@@ -59,7 +99,7 @@ footer {
   padding: 0;
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  font-size: 14px; }
+  font-size: 16px; }
 
 body {
   display: grid;
@@ -202,13 +242,15 @@ main {
     .office-main article ul, .documents-main article ul, .homeorg-main article ul, .wardrobe-main article ul {
       list-style-position: inside;
       padding-top: 5px; }
+      .office-main article ul li, .documents-main article ul li, .homeorg-main article ul li, .wardrobe-main article ul li {
+        font-size: 18px; }
 
 .paralax-image-documents {
-  background: url("../images/alberto-castillo-qunsplash-banner.png") no-repeat center center fixed;
+  background: url("../images/rawpixel-document-unsplash-banner.png") no-repeat center center fixed;
   background-size: cover; }
 
 .paralax-image-homeorg {
-  background: url("../images/rawpixel-document-unsplash-banner.png") no-repeat center center fixed;
+  background: url("../images/alberto-castillo-qunsplash-banner.png") no-repeat center center fixed;
   background-size: cover; }
 
 .homeorg-main p, .wardrobe-main p, .homeorg-main .paralax-image h1, .paralax-image .homeorg-main h1, .wardrobe-main .paralax-image h1, .paralax-image .wardrobe-main h1, .homeorg-main .paralax-image-office h1, .paralax-image-office .homeorg-main h1, .wardrobe-main .paralax-image-office h1, .paralax-image-office .wardrobe-main h1, .homeorg-main .paralax-image-documents h1, .paralax-image-documents .homeorg-main h1, .wardrobe-main .paralax-image-documents h1, .paralax-image-documents .wardrobe-main h1, .homeorg-main .paralax-image-homeorg h1, .paralax-image-homeorg .homeorg-main h1, .wardrobe-main .paralax-image-homeorg h1, .paralax-image-homeorg .wardrobe-main h1, .homeorg-main .paralax-image-wardrobe h1, .paralax-image-wardrobe .homeorg-main h1, .wardrobe-main .paralax-image-wardrobe h1, .paralax-image-wardrobe .wardrobe-main h1 {
@@ -216,7 +258,7 @@ main {
   padding-top: 7px; }
 
 .paralax-image-wardrobe {
-  background: url("../images/rawpixel-document-unsplash-banner.png") no-repeat center center fixed;
+  background: url("../images/fancycrave-254187-unsplash-banner.png") no-repeat center center fixed;
   background-size: cover; }
 
 /*# sourceMappingURL=style.css.map */
