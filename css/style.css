@@ -94,6 +94,12 @@ footer {
         text-decoration: none;
         color: black; }
 
+@media only screen and (max-width: 450px) {
+  footer ul li p > a {
+    font-size: 0.75em; }
+  footer div {
+    font-size: 0.5em;
+    padding: 5px 0; } }
 * {
   box-sizing: border-box;
   padding: 0;
