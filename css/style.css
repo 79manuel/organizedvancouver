@@ -274,7 +274,21 @@ main {
   background: url("../images/fabian-grohs-unsplash-banner.png") no-repeat center center fixed;
   background-size: cover; }
 
+@media only screen and (max-width: 1000px) {
+  .paralax-image p {
+    transform: translate(70px, -70px) !important;
+    font-size: 20px !important; }
+  .paralax-image h1 {
+    transform: translate(70px, -150px) !important;
+    font-size: 30px !important; } }
 @media only screen and (max-width: 450px) {
+  .paralax-image p {
+    transform: translate(70px, -50px) !important;
+    font-size: 18px !important; }
+  .paralax-image h1 {
+    transform: translate(70px, -130px) !important;
+    font-size: 28px !important; }
+
   .about-me {
     grid-row: 4;
     display: grid;
