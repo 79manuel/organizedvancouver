@@ -65,12 +65,12 @@ header {
 .dropdown-content a:nth-child(2) {
   border-top: 1px solid #29A79E; }
 
-/* Change color of dropdown links on hover */
+/* Changes background links on hover */
 .dropdown-content a:hover {
   cursor: pointer;
   background-color: #f2f2f2; }
 
-/* Show the dropdown menu on hover */
+/* Shows dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
   transition: 1s; }
@@ -90,7 +90,7 @@ footer {
       footer ul li img {
         vertical-align: bottom;
         width: 130%; }
-      footer ul li p > a, footer ul li .paralax-image h1 > a, .paralax-image footer ul li h1 > a, footer ul li .paralax-image-office h1 > a, .paralax-image-office footer ul li h1 > a, footer ul li .paralax-image-documents h1 > a, .paralax-image-documents footer ul li h1 > a, footer ul li .paralax-image-homeorg h1 > a, .paralax-image-homeorg footer ul li h1 > a, footer ul li .paralax-image-wardrobe h1 > a, .paralax-image-wardrobe footer ul li h1 > a, footer ul li .paralax-image-about h1 > a, .paralax-image-about footer ul li h1 > a {
+      footer ul li p > a {
         text-decoration: none;
         color: black; }
 
@@ -105,35 +105,38 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, auto); }
-
-.paralax-image, .paralax-image-office, .paralax-image-documents, .paralax-image-homeorg, .paralax-image-wardrobe, .paralax-image-about {
-  grid-row: 2;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: minmax(40px, auto);
-  width: 100%;
-  height: 100vh;
-  background: url("../images/paralax-image.png") no-repeat center center fixed;
-  background-size: cover; }
-  .paralax-image p, .paralax-image-office p, .paralax-image-documents p, .paralax-image-homeorg p, .paralax-image-wardrobe p, .paralax-image-about p, .paralax-image h1, .paralax-image-office h1, .paralax-image-documents h1, .paralax-image-homeorg h1, .paralax-image-wardrobe h1, .paralax-image-about h1 {
-    grid-column: 1/2;
+  body .paralax-image, body .paralax-image-office, body .paralax-image-documents, body .paralax-image-homeorg, body .paralax-image-wardrobe, body .paralax-image-about {
     grid-row: 2;
-    text-align: center;
-    height: 40%;
-    font-size: 28px;
-    transform: translate(70px, -70px);
-    z-index: 1; }
-  .paralax-image h1, .paralax-image-office h1, .paralax-image-documents h1, .paralax-image-homeorg h1, .paralax-image-wardrobe h1, .paralax-image-about h1 {
-    font-size: 38px;
-    transform: translate(70px, -120px);
-    z-index: 1; }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: minmax(40px, auto);
+    width: 100%;
+    height: 100vh;
+    background: url("../images/paralax-image.png") no-repeat center center fixed;
+    background-size: cover; }
+    body .paralax-image p, body .paralax-image-office p, body .paralax-image-documents p, body .paralax-image-homeorg p, body .paralax-image-wardrobe p, body .paralax-image-about p {
+      grid-column: 1/2;
+      grid-row: 2;
+      text-align: center;
+      height: 40%;
+      font-size: 28px;
+      transform: translate(70px, -70px);
+      z-index: 1; }
+    body .paralax-image h1, body .paralax-image-office h1, body .paralax-image-documents h1, body .paralax-image-homeorg h1, body .paralax-image-wardrobe h1, body .paralax-image-about h1 {
+      grid-column: 1/2;
+      grid-row: 2;
+      text-align: center;
+      height: 40%;
+      font-size: 38px;
+      transform: translate(70px, -120px);
+      z-index: 1; }
 
 main {
   grid-row: 3;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-auto-rows: minmax(100px, auto);
-  justify-items: center;
+  justify-content: center;
   align-items: center;
   padding: 100px 0; }
   main div {
@@ -160,7 +163,7 @@ main {
         background: url("../images/alberto-castillo-q-346020-unsplash-copy.png") no-repeat center center; }
       main div .service-image .wardrobe {
         background: url("../images/sarah-dorweiler-unsplash.png") no-repeat center center; }
-      main div .service-image p, main div .service-image .paralax-image h1, .paralax-image main div .service-image h1, main div .service-image .paralax-image-office h1, .paralax-image-office main div .service-image h1, main div .service-image .paralax-image-documents h1, .paralax-image-documents main div .service-image h1, main div .service-image .paralax-image-homeorg h1, .paralax-image-homeorg main div .service-image h1, main div .service-image .paralax-image-wardrobe h1, .paralax-image-wardrobe main div .service-image h1, main div .service-image .paralax-image-about h1, .paralax-image-about main div .service-image h1 {
+      main div .service-image p {
         color: #ffffff;
         position: relative;
         top: -130px;
@@ -169,7 +172,7 @@ main {
         transition: all 0.2s linear; }
     main div .service-image:hover {
       cursor: pointer; }
-      main div .service-image:hover p, main div .service-image:hover .paralax-image h1, .paralax-image main div .service-image:hover h1, main div .service-image:hover .paralax-image-office h1, .paralax-image-office main div .service-image:hover h1, main div .service-image:hover .paralax-image-documents h1, .paralax-image-documents main div .service-image:hover h1, main div .service-image:hover .paralax-image-homeorg h1, .paralax-image-homeorg main div .service-image:hover h1, main div .service-image:hover .paralax-image-wardrobe h1, .paralax-image-wardrobe main div .service-image:hover h1, main div .service-image:hover .paralax-image-about h1, .paralax-image-about main div .service-image:hover h1 {
+      main div .service-image:hover p {
         visibility: visible;
         -webkit-transition: all 0.2s linear;
         transition: all 0.2s linear;
@@ -207,7 +210,7 @@ main {
     align-items: center;
     justify-self: center;
     text-align: left; }
-    .about-me div:nth-child(2) p, .about-me div:nth-child(2) .paralax-image h1, .paralax-image .about-me div:nth-child(2) h1, .about-me div:nth-child(2) .paralax-image-office h1, .paralax-image-office .about-me div:nth-child(2) h1, .about-me div:nth-child(2) .paralax-image-documents h1, .paralax-image-documents .about-me div:nth-child(2) h1, .about-me div:nth-child(2) .paralax-image-homeorg h1, .paralax-image-homeorg .about-me div:nth-child(2) h1, .about-me div:nth-child(2) .paralax-image-wardrobe h1, .paralax-image-wardrobe .about-me div:nth-child(2) h1, .about-me div:nth-child(2) .paralax-image-about h1, .paralax-image-about .about-me div:nth-child(2) h1 {
+    .about-me div:nth-child(2) p {
       padding: 10px 20px;
       margin: 20px; }
     .about-me div:nth-child(2) ul li ul {
@@ -253,7 +256,7 @@ main {
   background: url("../images/alberto-castillo-qunsplash-banner.png") no-repeat center center fixed;
   background-size: cover; }
 
-.homeorg-main p, .wardrobe-main p, .about-main p, .homeorg-main .paralax-image h1, .paralax-image .homeorg-main h1, .wardrobe-main .paralax-image h1, .paralax-image .wardrobe-main h1, .about-main .paralax-image h1, .paralax-image .about-main h1, .homeorg-main .paralax-image-office h1, .paralax-image-office .homeorg-main h1, .wardrobe-main .paralax-image-office h1, .paralax-image-office .wardrobe-main h1, .about-main .paralax-image-office h1, .paralax-image-office .about-main h1, .homeorg-main .paralax-image-documents h1, .paralax-image-documents .homeorg-main h1, .wardrobe-main .paralax-image-documents h1, .paralax-image-documents .wardrobe-main h1, .about-main .paralax-image-documents h1, .paralax-image-documents .about-main h1, .homeorg-main .paralax-image-homeorg h1, .paralax-image-homeorg .homeorg-main h1, .wardrobe-main .paralax-image-homeorg h1, .paralax-image-homeorg .wardrobe-main h1, .about-main .paralax-image-homeorg h1, .paralax-image-homeorg .about-main h1, .homeorg-main .paralax-image-wardrobe h1, .paralax-image-wardrobe .homeorg-main h1, .wardrobe-main .paralax-image-wardrobe h1, .paralax-image-wardrobe .wardrobe-main h1, .about-main .paralax-image-wardrobe h1, .paralax-image-wardrobe .about-main h1, .homeorg-main .paralax-image-about h1, .paralax-image-about .homeorg-main h1, .wardrobe-main .paralax-image-about h1, .paralax-image-about .wardrobe-main h1, .about-main .paralax-image-about h1, .paralax-image-about .about-main h1 {
+.homeorg-main p, .wardrobe-main p, .about-main p {
   font-size: 18px;
   padding-top: 7px; }
 
@@ -264,5 +267,33 @@ main {
 .paralax-image-about {
   background: url("../images/fabian-grohs-unsplash-banner.png") no-repeat center center fixed;
   background-size: cover; }
+
+@media only screen and (max-width: 450px) {
+  .about-me {
+    grid-row: 4;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto auto;
+    grid-gap: 20px;
+    justify-items: center;
+    padding-top: 20px; }
+    .about-me div:nth-child(1) {
+      grid-row: 1;
+      align-items: center;
+      justify-self: center;
+      text-align: center; }
+      .about-me div:nth-child(1) img {
+        width: 85%;
+        margin: 0 auto; }
+    .about-me div:nth-child(2) {
+      grid-row: 2;
+      align-items: center;
+      justify-self: center;
+      text-align: left; }
+      .about-me div:nth-child(2) p {
+        padding: 10px 20px;
+        margin: 20px; }
+      .about-me div:nth-child(2) ul li ul {
+        list-style-position: inside; } }
 
 /*# sourceMappingURL=style.css.map */

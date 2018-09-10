@@ -18,38 +18,40 @@ body
   grid-template-columns: 1fr
   grid-template-rows: repeat(5, auto)
 
-.paralax-image
-  grid-row: 2
-  display: grid
-  grid-template-columns: repeat(2, 1fr)
-  grid-template-rows: minmax(40px, auto)
-  width: 100%
-  height: 100vh
-  background: url("../images/paralax-image.png") no-repeat center center fixed
-  background-size: cover
-
-  p
-    grid-column: 1 / 2
+  .paralax-image
     grid-row: 2
-    text-align: center
-    height: 40%
-    font-size: 28px
-    transform: translate(70px, -70px)
-    z-index: 1
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: minmax(40px, auto)
+    width: 100%
+    height: 100vh
+    background: url("../images/paralax-image.png") no-repeat center center fixed
+    background-size: cover
 
-  h1
-    @extend p
-    font-size: 38px
-    transform: translate(70px, -120px)
-    z-index: 1
+    p
+      grid-column: 1 / 2
+      grid-row: 2
+      text-align: center
+      height: 40%
+      font-size: 28px
+      transform: translate(70px, -70px)
+      z-index: 1
 
+    h1
+      grid-column: 1 / 2
+      grid-row: 2
+      text-align: center
+      height: 40%
+      font-size: 38px
+      transform: translate(70px, -120px)
+      z-index: 1
 
 main
   grid-row: 3
   display: grid
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
   grid-auto-rows: minmax(100px, auto)
-  justify-items: center
+  justify-content: center
   align-items: center
   padding: 100px 0
 
@@ -138,7 +140,6 @@ main
           list-style-position: inside
 
 //============ Office ==================
-
 
 .paralax-image-office
   @extend .paralax-image
@@ -233,3 +234,40 @@ main
 
 .about-main
   @extend .homeorg-main
+
+
+@media only screen and (max-width: 450px)
+
+  .about-me
+    grid-row: 4
+    display: grid
+    grid-template-columns: 1fr
+    grid-auto-rows: auto auto
+    grid-gap: 20px
+    justify-items: center
+    padding-top: 20px
+
+    div:nth-child(1)
+      grid-row: 1
+      align-items: center
+      justify-self: center
+      text-align: center
+      img
+        width: 85%
+        margin: 0 auto
+
+    div:nth-child(2)
+      grid-row: 2
+      align-items: center
+      justify-self: center
+      text-align: left
+      p
+        padding: 10px 20px
+        margin: 20px
+      ul
+        li
+          ul
+            list-style-position: inside
+
+
+
