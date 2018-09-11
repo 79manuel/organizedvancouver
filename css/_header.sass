@@ -5,7 +5,7 @@ $primary-color2: #90C73E
 header
   grid-row: 1
   display: grid
-  grid-template-columns: 0.75fr 3.25fr
+  grid-template-columns: 0.5fr 3.5fr
   grid-template-rows: 100px
   background-color: #ffffff
   position: fixed
@@ -13,20 +13,23 @@ header
   width: 100%
   z-index: 10
   .logo
+    text-align: center
+    margin-left: 50px
+
     img
-      width: 250px
+      width: 73px
 
   .navbar
     display: flex
     justify-content: center
+    padding: 0 30px
     ul
       display: flex
-      margin-left: 60px
       li
         align-self: center
         list-style-type: none
         padding: 15px 40px
-        margin: 0 5px
+        margin: 0 20px
         border-top: 1px solid $primary-color1
         border-bottom: 1px solid $primary-color1
         a
@@ -65,6 +68,7 @@ header
   width: 160%
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)
   z-index: 1
+  text-align: center
 
 /* Links inside the dropdown */
 .dropdown-content

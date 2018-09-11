@@ -1,26 +1,29 @@
 header {
   grid-row: 1;
   display: grid;
-  grid-template-columns: 0.75fr 3.25fr;
+  grid-template-columns: 0.5fr 3.5fr;
   grid-template-rows: 100px;
   background-color: #ffffff;
   position: fixed;
   border-bottom: 1px solid #29A79E;
   width: 100%;
   z-index: 10; }
-  header .logo img {
-    width: 250px; }
+  header .logo {
+    text-align: center;
+    margin-left: 50px; }
+    header .logo img {
+      width: 73px; }
   header .navbar {
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    padding: 0 30px; }
     header .navbar ul {
-      display: flex;
-      margin-left: 60px; }
+      display: flex; }
       header .navbar ul li {
         align-self: center;
         list-style-type: none;
         padding: 15px 40px;
-        margin: 0 5px;
+        margin: 0 20px;
         border-top: 1px solid #29A79E;
         border-bottom: 1px solid #29A79E; }
         header .navbar ul li a {
@@ -53,7 +56,8 @@ header {
   background-color: #ffffff;
   width: 160%;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  z-index: 1; }
+  z-index: 1;
+  text-align: center; }
 
 /* Links inside the dropdown */
 .dropdown-content a {
@@ -81,7 +85,8 @@ footer {
   grid-template-columns: 1fr;
   grid-auto-rows: auto auto;
   justify-items: center;
-  padding: 10px 0 5px 0; }
+  padding: 10px 0 5px 0;
+  border-top: 1px solid #29A79E; }
   footer ul {
     list-style-type: none; }
     footer ul li {
@@ -93,18 +98,21 @@ footer {
       footer ul li p > a {
         text-decoration: none;
         color: black; }
+  footer div p {
+    font-size: 0.65em;
+    padding: 10px 0; }
 
 @media only screen and (max-width: 450px) {
   footer ul li p > a {
     font-size: 0.75em; }
   footer div {
-    font-size: 0.5em;
+    font-size: 0.65em;
     padding: 5px 0; } }
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px; }
 
 body {
@@ -118,7 +126,7 @@ body {
     grid-template-rows: minmax(40px, auto);
     width: 100%;
     height: 100vh;
-    background: url("../images/paralax-image.png") no-repeat center center fixed;
+    background: url("../images/paralax-image.png") no-repeat center center scroll;
     background-size: cover; }
     body .paralax-image p {
       grid-column: 1/2;
@@ -195,7 +203,68 @@ main {
       border: 1px solid #29A79E;
       border-top: none;
       width: 80%;
-      align-items: center; }
+      padding: 0 10px;
+      text-align: justify;
+      align-items: center;
+      font-size: 14px; }
+
+.about-main h1 {
+  font-size: 28px;
+  font-weight: bold;
+  padding-bottom: 12pt; }
+
+.paralax-image-office, .paralax-image-documents, .paralax-image-homeorg, .paralax-image-wardrobe {
+  grid-row: 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: minmax(100px, auto);
+  width: 100%;
+  height: 30vh;
+  background: url("../images/emma-matthews-schedule-unsplash-banner.png") no-repeat center center scroll;
+  background-size: cover;
+  margin-top: 186px; }
+
+.office-tag, .documents-tag, .homeorg-tag, .wardrobe-tag, .aboutme-tag {
+  grid-column: 1/-1;
+  grid-row: 2;
+  text-align: center;
+  font-size: 38px;
+  font-weight: bold;
+  padding: 20px;
+  position: fixed;
+  margin-top: 100px;
+  background-color: #ffffff;
+  width: 100%; }
+
+.office-main, .about-main, .documents-main, .homeorg-main, .wardrobe-main {
+  grid-row: 4; }
+  .office-main article, .about-main article, .documents-main article, .homeorg-main article, .wardrobe-main article {
+    justify-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 30px 50px 100px 50px;
+    font-size: 18px; }
+    .office-main article ul, .about-main article ul, .documents-main article ul, .homeorg-main article ul, .wardrobe-main article ul {
+      list-style-position: inside;
+      padding-top: 5px; }
+      .office-main article ul li, .about-main article ul li, .documents-main article ul li, .homeorg-main article ul li, .wardrobe-main article ul li {
+        font-size: 18px; }
+    .office-main article p, .about-main article p, .documents-main article p, .homeorg-main article p, .wardrobe-main article p {
+      padding-bottom: 12pt;
+      font-size: 18px;
+      text-align: justify; }
+
+.paralax-image-documents {
+  background: url("../images/beatriz-perez-moya-unsplash-banner.png") no-repeat center center scroll;
+  background-size: cover; }
+
+.paralax-image-homeorg {
+  background: url("../images/alberto-castillo-qunsplash-banner.png") no-repeat center center scroll;
+  background-size: cover; }
+
+.paralax-image-wardrobe {
+  background: url("../images/sarah-dorweiler-unsplash-banner.png") no-repeat center center scroll;
+  background-size: cover; }
 
 .about-me {
   grid-row: 4;
@@ -221,58 +290,6 @@ main {
       margin: 20px; }
     .about-me div:nth-child(2) ul li ul {
       list-style-position: inside; }
-
-.paralax-image-office, .paralax-image-documents, .paralax-image-homeorg, .paralax-image-wardrobe, .paralax-image-about {
-  grid-row: 3;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: minmax(100px, auto);
-  width: 100%;
-  height: 30vh;
-  background: url("../images/emma-matthews-schedule-unsplash-banner.png") no-repeat center center fixed;
-  background-size: cover; }
-
-.office-tag, .documents-tag, .homeorg-tag, .wardrobe-tag, .about-tag {
-  grid-column: 1/-1;
-  grid-row: 2;
-  text-align: center;
-  font-size: 38px;
-  font-weight: bold;
-  margin-top: 100px;
-  padding: 20px; }
-
-.office-main, .documents-main, .homeorg-main, .wardrobe-main, .about-main {
-  grid-row: 4; }
-  .office-main article, .documents-main article, .homeorg-main article, .wardrobe-main article, .about-main article {
-    justify-items: center;
-    width: 80%;
-    margin: auto;
-    font-size: 18px; }
-    .office-main article ul, .documents-main article ul, .homeorg-main article ul, .wardrobe-main article ul, .about-main article ul {
-      list-style-position: inside;
-      padding-top: 5px; }
-      .office-main article ul li, .documents-main article ul li, .homeorg-main article ul li, .wardrobe-main article ul li, .about-main article ul li {
-        font-size: 18px; }
-
-.paralax-image-documents {
-  background: url("../images/beatriz-perez-moya-unsplash-banner.png") no-repeat center center fixed;
-  background-size: cover; }
-
-.paralax-image-homeorg {
-  background: url("../images/alberto-castillo-qunsplash-banner.png") no-repeat center center fixed;
-  background-size: cover; }
-
-.homeorg-main p, .wardrobe-main p, .about-main p {
-  font-size: 18px;
-  padding-top: 7px; }
-
-.paralax-image-wardrobe {
-  background: url("../images/sarah-dorweiler-unsplash-banner.png") no-repeat center center fixed;
-  background-size: cover; }
-
-.paralax-image-about {
-  background: url("../images/fabian-grohs-unsplash-banner.png") no-repeat center center fixed;
-  background-size: cover; }
 
 @media only screen and (max-width: 1000px) {
   .paralax-image p {
