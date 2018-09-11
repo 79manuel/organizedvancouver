@@ -13,6 +13,8 @@ header {
     margin-left: 50px; }
     header .logo img {
       width: 73px; }
+  header .phone-number-mobile {
+    display: none; }
   header .navbar {
     display: flex;
     justify-content: center;
@@ -40,6 +42,8 @@ header {
         border: none; }
         header .navbar ul li:nth-child(4) a {
           font-weight: bolder; }
+  header .hamburguer-menu {
+    display: none; }
 
 .dropdown {
   position: relative;
@@ -79,6 +83,39 @@ header {
   display: block;
   transition: 1s; }
 
+@media only screen and (max-width: 450px) {
+  header {
+    grid-template-columns: 0.5fr 1.75fr 1.75fr;
+    grid-template-rows: 80px; }
+    header .logo {
+      margin: 0 20px;
+      padding-top: 10px; }
+      header .logo img {
+        width: 50px; }
+    header .navbar {
+      display: none; }
+    header .phone-number-mobile {
+      display: block;
+      text-align: right;
+      padding-top: 15px; }
+      header .phone-number-mobile a {
+        text-decoration: none;
+        color: black; }
+    header .hamburguer-menu {
+      cursor: pointer;
+      display: block;
+      text-align: right; }
+      header .hamburguer-menu img {
+        width: 50px;
+        margin: 15px 20px 20px 20px; }
+
+  .dropdown-content {
+    top: 82px;
+    background-color: rgba(250, 250, 250, 0.9);
+    width: 140%; }
+
+  .dropdown-content a {
+    border-top: 1px solid #29A79E; } }
 footer {
   grid-row: 5;
   display: grid;
@@ -315,6 +352,31 @@ main {
     .about-me div:nth-child(1) {
       grid-row: 1; }
     .about-me div:nth-child(2) {
-      grid-row: 2; } }
+      grid-row: 2; }
+
+  .office-tag, .documents-tag, .homeorg-tag, .wardrobe-tag, .aboutme-tag {
+    margin-top: 80px;
+    font-size: 28px; }
+
+  .paralax-image-office, .paralax-image-documents, .paralax-image-homeorg, .paralax-image-wardrobe {
+    margin-top: 166px; }
+
+  .office-main, .about-main, .documents-main, .homeorg-main, .wardrobe-main {
+    grid-row: 4; }
+    .office-main article, .about-main article, .documents-main article, .homeorg-main article, .wardrobe-main article {
+      justify-items: center;
+      width: 95%;
+      margin: auto;
+      padding: 0 50px 100px 50px;
+      font-size: 16px; }
+      .office-main article ul, .about-main article ul, .documents-main article ul, .homeorg-main article ul, .wardrobe-main article ul {
+        list-style-position: inside;
+        padding-top: 5px; }
+        .office-main article ul li, .about-main article ul li, .documents-main article ul li, .homeorg-main article ul li, .wardrobe-main article ul li {
+          font-size: 18px; }
+      .office-main article p, .about-main article p, .documents-main article p, .homeorg-main article p, .wardrobe-main article p {
+        padding-bottom: 12pt;
+        font-size: 18px;
+        text-align: justify; } }
 
 /*# sourceMappingURL=style.css.map */

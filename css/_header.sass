@@ -15,9 +15,11 @@ header
   .logo
     text-align: center
     margin-left: 50px
-
     img
       width: 73px
+
+  .phone-number-mobile
+    display: none
 
   .navbar
     display: flex
@@ -47,7 +49,8 @@ header
         border: none
         a
           font-weight: bolder
-
+  .hamburguer-menu
+    display: none
 
 //========== Dropdown Menu ===========
 
@@ -90,5 +93,41 @@ header
 .dropdown:hover .dropdown-content
   display: block
   transition: 1s
+
+
+@media only screen and (max-width: 450px)
+  header
+    grid-template-columns: 0.5fr 1.75fr 1.75fr
+    grid-template-rows: 80px
+    .logo
+      margin: 0 20px
+      padding-top: 10px
+      img
+        width: 50px
+    .navbar
+      display: none
+    .phone-number-mobile
+      display: block
+      text-align: right
+      padding-top: 15px
+      a
+        text-decoration: none
+        color: black
+    .hamburguer-menu
+      cursor: pointer
+      display: block
+      text-align: right
+      img
+        width: 50px
+        margin: 15px 20px 20px 20px
+
+  .dropdown-content
+    top: 82px
+    background-color: rgba(250,250,250,0.9)
+    width: 140%
+
+  .dropdown-content
+    a
+      border-top: 1px solid $primary-color1
 
 
