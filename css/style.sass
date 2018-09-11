@@ -36,6 +36,9 @@ body
       font-size: 28px
       transform: translate(70px, -70px)
       z-index: 1
+    p:nth-child(3)
+      transform: translate(70px, -30px)
+      border-top: 5px solid black
 
     h1
       grid-column: 1 / 2
@@ -248,24 +251,38 @@ main
 .aboutme-tag
   @extend .office-tag
 
-@media only screen and (max-width: 1000px)
 
+//========================
+    TABLET
+//========================
+
+@media only screen and (min-width: 703px) and (max-width: 962px)
   .paralax-image
     p
-      transform: translate(70px, -70px) !important
-      font-size: 20px !important
-
-    h1
-      transform: translate(70px, -150px) !important
+      transform: translate(70px, -80px) !important
       font-size: 30px !important
+    p:nth-child(3)
+      transform: translate(70px, 0px) !important
+      border-top: 5px solid black
+      padding-top: 5px
+    h1
+      transform: translate(70px, -180px) !important
+      font-size: 40px !important
 
+//========================
+          MOBILE
+//========================
 
-@media only screen and (max-width: 450px)
+@media only screen and (max-width: 702px)
 
   .paralax-image
     p
       transform: translate(70px, -50px) !important
       font-size: 18px !important
+    p:nth-child(3)
+      transform: translate(70px, 0px) !important
+      border-top: 5px solid black
+      padding-top: 5px
 
     h1
       transform: translate(70px, -130px) !important
