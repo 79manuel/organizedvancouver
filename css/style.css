@@ -237,7 +237,8 @@ main {
     padding-bottom: 20px;
     text-align: center; }
     main div a {
-      width: 95%; }
+      width: 95%;
+      text-decoration: none; }
       main div a .service-image {
         grid-row: 1; }
         main div a .service-image .bg {
