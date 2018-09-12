@@ -233,32 +233,34 @@ main {
     grid-template-columns: 1fr;
     grid-template-rows: 150px auto;
     justify-items: center;
-    width: 95%;
+    width: 100%;
     padding-bottom: 20px;
     text-align: center; }
-    main div .service-image {
-      grid-row: 1; }
-      main div .service-image .bg {
-        background-size: cover;
-        width: 100%;
-        height: 150px;
-        border: 1px solid #90C73E;
-        border-bottom: none; }
-      main div .service-image .office {
-        background: url("../images/emma-matthews-schedule-unsplash.png") no-repeat center center; }
-      main div .service-image .document {
-        background: url("../images/beatriz-perez-moya-unsplash.png") no-repeat center center; }
-      main div .service-image .home {
-        background: url("../images/alberto-castillo-q-346020-unsplash-copy.png") no-repeat center center; }
-      main div .service-image .wardrobe {
-        background: url("../images/sarah-dorweiler-unsplash.png") no-repeat center center; }
-      main div .service-image p {
-        color: #ffffff;
-        position: relative;
-        top: -130px;
-        visibility: hidden;
-        -webkit-transition: all 0.2s linear;
-        transition: all 0.2s linear; }
+    main div a {
+      width: 95%; }
+      main div a .service-image {
+        grid-row: 1; }
+        main div a .service-image .bg {
+          background-size: cover;
+          width: 100%;
+          height: 150px;
+          border: 1px solid #90C73E;
+          border-bottom: none; }
+        main div a .service-image .office {
+          background: url("../images/emma-matthews-schedule-unsplash.png") no-repeat center center; }
+        main div a .service-image .document {
+          background: url("../images/beatriz-perez-moya-unsplash.png") no-repeat center center; }
+        main div a .service-image .home {
+          background: url("../images/alberto-castillo-q-346020-unsplash-copy.png") no-repeat center center; }
+        main div a .service-image .wardrobe {
+          background: url("../images/sarah-dorweiler-unsplash.png") no-repeat center center; }
+        main div a .service-image p {
+          color: #ffffff;
+          position: relative;
+          top: -130px;
+          visibility: hidden;
+          -webkit-transition: all 0.2s linear;
+          transition: all 0.2s linear; }
     main div .service-image:hover {
       cursor: pointer; }
       main div .service-image:hover p {
