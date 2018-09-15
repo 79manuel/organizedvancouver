@@ -10,4 +10,4 @@ fields:
   label: Image
 - type: textarea
 pages:
-- content/blog.md
+- content/blog.html.md
