@@ -6,3 +6,4 @@ fields:
 - type: text
   name: text
   label: text
+  default: Hello
