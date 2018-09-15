@@ -1,0 +1,9 @@
+---
+label: test2
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: text
+  label: text
+  default: Hello

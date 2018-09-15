@@ -1,0 +1,11 @@
+---
+label: Blog
+hide_body: false
+is_partial: false
+fields:
+- type: text
+- type: datetime
+- type: file
+  name: image
+  label: Image
+- type: textarea
