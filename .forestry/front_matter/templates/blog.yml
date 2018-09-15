@@ -9,3 +9,5 @@ fields:
   name: image
   label: Image
 - type: textarea
+pages:
+- content/blog.md
