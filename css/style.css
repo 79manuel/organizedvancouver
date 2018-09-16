@@ -28,22 +28,18 @@ header {
         padding: 15px 20px;
         margin: 0 10px;
         border-top: 1px solid #29A79E;
-        border-bottom: 1px solid #29A79E;
-        font-size: 12px; }
+        border-bottom: 1px solid #29A79E; }
         header .navbar ul li a {
           text-decoration: none;
-          color: black;
-          font-size: 16px; }
-        header .navbar ul li ul li {
-          border: none !important; }
+          color: black; }
       header .navbar ul li:hover {
         border-top: 1px solid lightgray;
         border-bottom: 1px solid lightgray; }
-      header .navbar ul li:nth-child(6) {
-        margin-left: 25px;
+      header .navbar ul li:nth-child(4) {
+        margin-left: 55px;
         text-align: center;
         border: none; }
-        header .navbar ul li:nth-child(6) a {
+        header .navbar ul li:nth-child(4) a {
           font-weight: bolder; }
   header .hamburguer-menu {
     display: none; }
@@ -58,7 +54,7 @@ header {
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 50px;
+  top: 49px;
   right: 0;
   background-color: #ffffff;
   width: 160%;
@@ -72,8 +68,7 @@ header {
   padding: 15px;
   text-decoration: none;
   display: block;
-  width: auto; }
-.dropdown-content a:nth-child(2) {
+  width: 100%;
   border-top: 1px solid #29A79E; }
 
 /* Changes background links on hover */
@@ -158,8 +153,8 @@ footer {
   grid-row: 5;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
-  padding: 10px 0 5px 0;
+  grid-template-rows: auto auto auto;
+  padding: 0 0 5px 0;
   border-top: 1px solid #29A79E; }
   footer .footer-block-1 {
     grid-row: 1;
@@ -186,14 +181,28 @@ footer {
           footer .footer-block-1 div ul li p > a {
             text-decoration: none;
             color: black; }
-    footer .footer-block-1 img {
-      width: 30%; }
+    footer .footer-block-1 .contact-info ul {
+      text-align: center; }
+      footer .footer-block-1 .contact-info ul li {
+        display: block; }
+    footer .footer-block-1 .member-of {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto; }
+      footer .footer-block-1 .member-of h1 {
+        margin-top: 50px; }
+      footer .footer-block-1 .member-of img {
+        justify-self: center;
+        grid-row: 2;
+        width: 30%; }
   footer .copyright {
-    grid-row: 2;
+    grid-row: 3;
     justify-self: center; }
     footer .copyright p {
       font-size: 0.85em;
       padding: 15px 0; }
+  footer .site-map ul li {
+    display: block; }
 
 footer .footer-block-1 div {
   margin-bottom: 10px !important; }
@@ -205,7 +214,10 @@ footer .footer-block-1 div {
   padding: 0;
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+  color: #333333; }
+  * h1 {
+    color: #222222; }
 
 body {
   display: grid;
