@@ -6,6 +6,7 @@
     <title>Organized Vancouver</title>
     <link rel="icon" type="image/png" href="images/Logo-copy.png" />
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/js.js"></script>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <!--TODO: Add map site (xml file in root folder) -->
 </head>
@@ -63,20 +64,36 @@
         <a href="tel:604-612-6486">Contact Us<br>
             604-612-6486</a>
     </div>
-    <div class="hamburguer-menu dropdown" style="float:right">
-        <img src="images/menu-three-horizontal-lines-symbol.png">
-        <ul>
-            <li class="dropdown-content" style="right: -2px; margin: 0; padding: 0;">
-                <a href="homeorg.html">Home Organizing</a>
-                <a href="office.html">Office Organizing</a>
-                <a href="time-management.html">Time Management</a>
-                <a href="aboutme.html">Meet Laura</a>
-                <a href="#">Testimonials</a>
-                <a href="#">Gallery (Coming Soon)</a>
-                <a href="wardrobe.html">Wardrobe Management</a>
-            </li>
-        </ul>
+    <!--<div class="hamburguer-menu dropdown-mobile" style="float:right">-->
+        <!--<button onclick="myFunction()" class="dropbtn">-->
+            <!--<img src="images/menu-three-horizontal-lines-symbol.png">-->
+        <!--</button>-->
+        <!--<div id="myDropdown" class="dropdown-content-mobile">-->
+            <!--<a href="homeorg.html">Home Organizing</a>-->
+            <!--<a href="office.html">Office Organizing</a>-->
+            <!--<a href="time-management.html">Time Management</a>-->
+            <!--<a href="aboutme.html">Meet Laura</a>-->
+            <!--<a href="#">Testimonials</a>-->
+            <!--<a href="#">Gallery (Coming Soon)</a>-->
+            <!--<a href="wardrobe.html">Wardrobe Management</a>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <div class="hamburguer-menu">
+        <button onclick="myFunction()" class="dropbtn">
+            <img src="images/menu-three-horizontal-lines-symbol.png">
+        </button>
+        <div id="myDropdown" class="dropdown-content-mobile">
+            <a href="homeorg.html">Home Organizing</a>
+            <a href="office.html">Office Organizing</a>
+            <a href="time-management.html">Time Management</a>
+            <a href="aboutme.html">Meet Laura</a>
+            <a href="#">Testimonials</a>
+            <a href="#">Gallery (Coming Soon)</a>
+            <a href="wardrobe.html">Ideas and Inspiration</a>
+        </div>
     </div>
+
 </header>
 
 <section class="paralax-image">
@@ -123,18 +140,6 @@
             coach you to manage your time and help you get the right things done.
         </div>
     </div>
-    <!--<div>-->
-        <!--<a href="wardrobe.html">-->
-            <!--<div class="service-image">-->
-                <!--<div class="bg wardrobe"></div>-->
-                <!--<p>Wardrobe Systems</p>-->
-            <!--</div>-->
-        <!--</a>-->
-        <!--<div class="description-box">-->
-            <!--Look your best by having clothes that suit your needs and your style. Know when an article of clothing-->
-            <!--is missing, and when to replace pieces you used to love.-->
-        <!--</div>-->
-    <!--</div>-->
 </main>
 
 <section class="about-main">
@@ -213,6 +218,5 @@
         <p>2018 &copy; Organized Vancouver</p>
     </div>
 </footer>
-<script src="js/js.js"></script>
 </body>
 </html>
