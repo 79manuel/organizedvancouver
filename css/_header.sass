@@ -68,6 +68,17 @@ header
   top: 49px
   right: 0
   background-color: #ffffff
+  width: 80%
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)
+  z-index: 1
+  text-align: center
+
+.dropdown-content-about-me
+  display: none
+  position: absolute
+  top: 49px
+  right: 0
+  background-color: #ffffff
   width: 160%
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)
   z-index: 1
@@ -83,16 +94,33 @@ header
     width: 100%
     border-top: 1px solid $primary-color1
 
+.dropdown-content-about-me
+  a
+    color: black
+    padding: 15px
+    text-decoration: none
+    display: block
+    width: 100%
+    border-top: 1px solid $primary-color1
+
 /* Changes background links on hover */
 .dropdown-content a:hover
   cursor: pointer
   background-color: #f2f2f2
+
+.dropdown-content-about-me a:hover
+  cursor: pointer
+  background-color: #f2f2f2
+
 
 /* Shows dropdown menu on hover */
 .dropdown:hover .dropdown-content
   display: block
   transition: 1s
 
+.dropdown:hover .dropdown-content-about-me
+  display: block
+  transition: 1s
 
 //========================
   MOBILE
