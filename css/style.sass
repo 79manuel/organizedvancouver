@@ -250,6 +250,37 @@ main
   @extend .office-tag
 
 
+//================ testimonials ===============
+
+$background-color: hsl(50, 5, 97)
+$black: hsl(200, 40, 10)
+$white: $background-color
+$base-font-size: 1em
+$base-line-height: 1.5em
+article
+  .brooks
+    position: relative
+    font-family: 'Sanchez', serif
+    font-size: $base-font-size
+    line-height: $base-line-height
+    font-style: italic
+    background-color: #ffffff
+    z-index: -1
+    margin-bottom: 40px
+
+    &:before
+      content: '\201C'
+      position: absolute
+      top: 0.1em
+      left: -0.5em
+      color: darken($white, 7%)
+      font-size: 9em
+      z-index: -2
+
+.paralax-image-testimonials
+  @extend .paralax-image-office
+  background: url("../images/ilya-pavlov-unsplash-banner.png") no-repeat center center scroll
+  background-size: cover
 //========================
     TABLET
 //========================

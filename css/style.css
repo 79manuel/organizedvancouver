@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header {
   grid-row: 1;
   display: grid;
@@ -363,7 +364,7 @@ main {
   font-weight: bold;
   padding-bottom: 12pt; }
 
-.paralax-image-office, .paralax-image-documents, .paralax-image-homeorg, .paralax-image-wardrobe {
+.paralax-image-office, .paralax-image-documents, .paralax-image-homeorg, .paralax-image-wardrobe, .paralax-image-testimonials {
   grid-row: 3;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -441,6 +442,28 @@ main {
     .about-me div:nth-child(2) ul li ul {
       list-style-position: inside; }
 
+article .brooks {
+  position: relative;
+  font-family: "Sanchez", serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  font-style: italic;
+  background-color: #ffffff;
+  z-index: -1;
+  margin-bottom: 40px; }
+  article .brooks:before {
+    content: "“";
+    position: absolute;
+    top: 0.1em;
+    left: -0.5em;
+    color: #e7e6e4;
+    font-size: 9em;
+    z-index: -2; }
+
+.paralax-image-testimonials {
+  background: url("../images/ilya-pavlov-unsplash-banner.png") no-repeat center center scroll;
+  background-size: cover; }
+
 @media only screen and (min-width: 703px) and (max-width: 962px) {
   .paralax-image p {
     transform: translate(70px, -80px) !important;
@@ -482,7 +505,7 @@ main {
     margin-top: 80px;
     font-size: 28px; }
 
-  .paralax-image-office, .paralax-image-documents, .paralax-image-homeorg, .paralax-image-wardrobe {
+  .paralax-image-office, .paralax-image-documents, .paralax-image-homeorg, .paralax-image-wardrobe, .paralax-image-testimonials {
     margin-top: 166px; }
 
   .office-main, .about-main, .documents-main, .homeorg-main, .wardrobe-main {
