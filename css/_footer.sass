@@ -16,13 +16,18 @@ footer
       display: grid
       grid-template-columns: 1fr
       grid-template-rows: auto auto auto
-
       h1
         grid-row: 1
-        align-self: end
+        justify-self: center
+        align-self: start
+        margin-top: 15px
       ul
         grid-row: 2
         list-style-type: none
+        text-align: center
+        justify-self: center
+        align-self: start
+        transform: translate(0, -30px)
         li
           display: inline-block
           padding: 5px 10px 5px 0
@@ -33,10 +38,23 @@ footer
           p > a
             text-decoration: none
             color: black
+
     .contact-info
+      display: grid
+      grid-template-columns: 1fr
+      grid-template-rows: auto auto
+      h1
+        justify-self: center
+        align-self: start
+        margin-top: 15px
       ul
         text-align: center
+        justify-self: center
+        align-self: start
+        transform: translate(0, -30px)
         li
+          justify-self: center
+          align-self: start
           display: block
 
     .member-of
@@ -44,7 +62,9 @@ footer
       grid-template-columns: 1fr
       grid-template-rows: auto auto
       h1
-        margin-top: 50px
+        justify-self: center
+        align-self: start
+        margin-top: 15px
       img
         justify-self: center
         grid-row: 2
@@ -73,18 +93,52 @@ footer
       font-size: .85em
       padding: 15px 0
 
-@media only screen and (max-width: 450px)
-footer
-  .footer-block-1
-    div
-      margin: 10px 0 !important
-      h1
+//========================
+    TABLET
+//========================
+
+@media only screen and (min-width: 689px) and (max-width: 1038px)
+  footer
+    .footer-block-1
+      div
+        margin: 10px 0 !important
+        h1
+          text-align: center
+        ul
+          transform: translate(0, 0)
+
+      .contact-info
+        ul
+          transform: translate(0, 0)
+
+      .member-of
+        margin-top: 20px
+
+//========================
+  MOBILE
+//========================
+
+@media only screen and (max-width: 688px)
+  footer
+    .footer-block-1
+      div
+        margin: 10px 0 !important
+        h1
+          text-align: center
+        ul
+          transform: translate(0, 0)
+
+      .contact-info
+        ul
+          transform: translate(0, 0)
+
+      .member-of
+        margin-top: 20px
+
+    .map-site
+      li
+        justify-content: center
         text-align: center
-  .map-site
-    justify-content: center
-    text-align: center
-    li
-      a
-      ul
-        li
-          a
+        font-size: 10px
+        a
+          font-size: 10px
