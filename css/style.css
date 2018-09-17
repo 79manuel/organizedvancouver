@@ -246,9 +246,12 @@ footer {
       padding: 15px 0; }
 
 footer .footer-block-1 div {
-  margin-bottom: 10px !important; }
+  margin: 10px 0 !important; }
   footer .footer-block-1 div h1 {
     text-align: center; }
+footer .map-site {
+  justify-content: center;
+  text-align: center; }
 
 * {
   box-sizing: border-box;
@@ -464,7 +467,7 @@ article .brooks {
   background: url("../images/ilya-pavlov-unsplash-banner.png") no-repeat center center scroll;
   background-size: cover; }
 
-@media only screen and (min-width: 703px) and (max-width: 962px) {
+@media only screen and (min-width: 753px) and (max-width: 962px) {
   .paralax-image p {
     transform: translate(70px, -80px) !important;
     font-size: 30px !important; }
@@ -497,9 +500,11 @@ article .brooks {
     grid-auto-rows: auto auto;
     padding-top: 0; }
     .about-me div:nth-child(1) {
-      grid-row: 1; }
+      grid-row: 1;
+      margin-top: 110px; }
     .about-me div:nth-child(2) {
-      grid-row: 2; }
+      grid-row: 2;
+      text-align: justify; }
 
   .office-tag, .documents-tag, .homeorg-tag, .wardrobe-tag, .aboutme-tag {
     margin-top: 80px;
