@@ -1,0 +1,263 @@
+$font-stack: 'Open Sans', sans-serif
+$primary-color1: #29A79E
+$primary-color2: #90C73E
+
+header
+  grid-row: 1
+  display: grid
+  grid-template-columns: 0.5fr 3.5fr
+  grid-template-rows: 100px
+  background-color: #ffffff
+  position: fixed
+  border-bottom: 1px solid $primary-color1
+  width: 100%
+  z-index: 10
+  .logo
+    text-align: center
+    margin-left: 50px
+    img
+      width: 73px
+
+  .phone-number-mobile
+    display: none
+
+  .navbar
+    display: flex
+    justify-content: center
+    padding: 0 30px
+    background-color: #ffffff
+    ul
+      display: flex
+      margin-left: 20px
+      li
+        align-self: center
+        list-style-type: none
+        padding: 15px 20px
+        margin: 0 10px
+        border-top: 1px solid $primary-color1
+        border-bottom: 1px solid $primary-color1
+        a
+          text-decoration: none
+          color: black
+
+      li:hover
+        border-top: 1px solid lightgray
+        border-bottom: 1px solid lightgray
+
+      li:nth-child(4)
+        margin-left: 55px
+        text-align: center
+        border: none
+        a
+          font-weight: bolder
+  .hamburguer-menu
+    display: none
+
+//========== Dropdown Menu ===========
+
+.dropdown
+  position: relative
+  display: inline-block
+  ul
+    border: none
+
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content
+  display: none
+  position: absolute
+  top: 49px
+  right: 0
+  background-color: #ffffff
+  width: 80%
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)
+  z-index: 1
+  text-align: center
+
+.dropdown-content-about-me
+  display: none
+  position: absolute
+  top: 49px
+  right: 0
+  background-color: #ffffff
+  width: 160%
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)
+  z-index: 1
+  text-align: center
+
+/* Links inside the dropdown */
+.dropdown-content
+  a
+    color: black
+    padding: 15px
+    text-decoration: none
+    display: block
+    width: 100%
+    border-top: 1px solid $primary-color1
+
+.dropdown-content-about-me
+  a
+    color: black
+    padding: 15px
+    text-decoration: none
+    display: block
+    width: 100%
+    border-top: 1px solid $primary-color1
+
+/* Changes background links on hover */
+.dropdown-content a:hover
+  cursor: pointer
+  background-color: #f2f2f2
+
+.dropdown-content-about-me a:hover
+  cursor: pointer
+  background-color: #f2f2f2
+
+
+/* Shows dropdown menu on hover */
+.dropdown:hover .dropdown-content
+  display: block
+  transition: 1s
+
+.dropdown:hover .dropdown-content-about-me
+  display: block
+  transition: 1s
+
+//========================
+  TABLET
+//========================
+
+@media only screen and (min-width: 689px) and (max-width: 1038px)
+  header
+    grid-template-columns: 0.5fr 3fr .5fr
+    grid-template-rows: 80px
+    .logo
+      margin: 0 20px
+      padding-top: 10px
+      img
+        width: 50px
+    .navbar
+      display: none
+    .phone-number-mobile
+      display: block
+      text-align: center
+      padding-top: 20px
+      a
+        text-decoration: none
+        color: black
+        font-weight: bold
+
+    .hamburguer-menu
+      position: relative
+      display: block
+      justify-self: end
+      .dropbtn
+        width: 80px
+        height: 60px
+        padding-top: 15px
+        outline: none
+        border: none
+        cursor: pointer
+        background-color: #ffffff
+        img
+          width: 50%
+          margin: 0
+
+      .dropbtn:hover, .dropbtn:focus
+        border: none
+
+      .dropdown-content-mobile
+        display: none
+        position: absolute
+        top: 80px
+        right: 0
+        background-color: #ffffff
+        width: 160%
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)
+        z-index: 1
+        text-align: center
+
+
+      .dropdown-content-mobile a
+        color: black
+        padding: 15px
+        text-decoration: none
+        display: block
+        width: 100%
+        border-top: 1px solid $primary-color1
+
+      .dropdown-content-mobile a:hover
+        cursor: pointer
+        background-color: #f2f2f2
+      .show
+        display: block
+
+//========================
+  MOBILE
+//========================
+
+@media only screen and (max-width: 688px)
+  header
+    grid-template-columns: 0.5fr 3fr .5fr
+    grid-template-rows: 80px
+    .logo
+      margin: 0 20px
+      padding-top: 10px
+      img
+        width: 50px
+    .navbar
+      display: none
+    .phone-number-mobile
+      display: block
+      text-align: center
+      padding-top: 20px
+      a
+        text-decoration: none
+        color: black
+        font-weight: bold
+
+    .hamburguer-menu
+      position: relative
+      display: block
+      justify-self: end
+      .dropbtn
+        width: 80px
+        height: 60px
+        padding-top: 15px
+        outline: none
+        border: none
+        cursor: pointer
+        background-color: #ffffff
+        img
+          width: 50%
+          margin: 0
+
+      .dropbtn:hover, .dropbtn:focus
+        border: none
+
+      .dropdown-content-mobile
+        display: none
+        position: absolute
+        top: 80px
+        right: 0
+        background-color: #ffffff
+        width: 160%
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)
+        z-index: 1
+        text-align: center
+
+
+      .dropdown-content-mobile a
+        color: black
+        padding: 15px
+        text-decoration: none
+        display: block
+        width: 100%
+        border-top: 1px solid $primary-color1
+
+      .dropdown-content-mobile a:hover
+        cursor: pointer
+        background-color: #f2f2f2
+      .show
+        display: block
+
